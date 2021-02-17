@@ -10,7 +10,7 @@
 <div id = "header">
 <h1>SOS - What is your emergency?</h1>
 </div>
-<span id = "covid" class = "button">COVID</span>
+<a href = "./covid.html" id = "covid" class = "button">COVID</a>
 <span id = "fire" class = "button">Fire</span>
 <span id = "power" class = "button">Power Outage</span>
 <span id = "weather" class = "button">Extreme Weather</span>
@@ -27,18 +27,22 @@ body {
   background: #eee;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 #container {
   text-align: center;
   height: 1060px;
   display: grid;
-  grid-template-rows: 10% auto auto auto 5%;
+  grid-template-rows: 10% 30% 30% 30%;
   grid-template-columns: auto 30% 30% auto;
   grid-template-areas:
   ". header header ."
   ". a a ."
   ". b c ."
   ". d e ."
-  ". . . ."
   ; 
 }
 
@@ -52,6 +56,9 @@ body {
 }
 
 .button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   font-weight: 800;
   font-size: 3rem;
   margin: 5px;
@@ -83,7 +90,7 @@ body {
 
 #eq {
   grid-area: e;
-  background: rgba(65, 51, 5, 0.87);
+  background: rgba(117, 90, 2, 0.87);
 }
 
 .button:hover {

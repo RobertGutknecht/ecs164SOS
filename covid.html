@@ -1,94 +1,59 @@
-
 <!doctype html>
 <html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<link rel="stylesheet" type="text/css" href="./main.css">
+<script src="./main.js"></script>
 <title>COVID Info - SOS</title>
 </head>
 <body>
 <div id="container">
-<div id = "header">
-<h1>SOS - What is your emergency?</h1>
+<header>
+<h1>COVID Info - SOS</h1>
+</header>
+<nav>
+  <a href = "index.html">Home</a>
+  <a href = "covid.html">COVID</a>
+  <a href = "#">Earthquake</a>
+  <a href = "#">Weather</a>
+  <a href = "#">Fire</a>
+  <a href = "#">Power Outage</a>
+</nav>
+<div id = "mapParent" >
+  <h2>Yolo County Map</h2>
+  <img src = "./assets/yoloMap.jpg" class = "map" alt = "Yolo County Map"/>
 </div>
-<span id = "covid" class = "button">COVID</span>
-<span id = "fire" class = "button">Fire</span>
-<span id = "power" class = "button">Power Outage</span>
-<span id = "weather" class = "button">Extreme Weather</span>
-<span id = "eq" class = "button">Earthquake</span>
+<article id = "info" class = "bordered">
+<h2>Resources</h2>
+<p>Vaccine Distribution: <strong>Phase 1a</strong></p>
+<p>
+  Yolo County Health Department:<br>
+  137 N Cottonwood St, Woodland, CA 95695<br>
+  (530) 666-8645
+</p>
+<p>
+  Vaccination Sites:<br>
+  Location 1<br>
+  Location 2<br>
+  Location 3<br>
+  <a href = "#">More Info</a>
+</p>
+<p>CDC Vaccine Updates: <a href = "#">Link</a></p>
+</article>
+<article id = "news" class = "bordered">
+  <h2>News</h2>
+  <p>
+  02/09/21 - Pellentesque tempus id lacus at sagittis. Quisque venenatis suscipit justo, at fringilla odio pulvinar sed. Nam luctus non sapien vel ornare. Praesent mollis id justo sed dignissim. Integer malesuada vulputate libero sit amet venenatis. Nunc purus mauris, semper in augue vitae, pretium porta nisl. Curabitur vel leo eget mi molestie porta non commodo orci. Vivamus sit amet sem eu est efficitur dapibus. Etiam ac libero faucibus, pharetra dolor id, imperdiet massa. Mauris auctor vehicula pharetra.
+  </p>
+  <p>
+  01/23/21 - Lorem ipsum dolor sit amet, viverra porta elit. Vestibulum congue porttitor venenatis. Etiam sit amet ipsum in ipsum ornare volutpat sed in augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam sit amet pharetra nulla, eu ornare ex. Ut quis lacus turpis. Curabitur porta orci eget.   
+  </p>
+  <p>
+  12/05/20 - Consectetur adipiscing elit. Morbi diam massa, consectetur quis purus in, viverra porta elit. Vestibulum congue porttitor venenatis. Etiam sit amet ipsum in ipsum ornare volutpat sed in augue. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nam sit amet pharetra nulla, eu ornare ex. Ut quis lacus turpis. Curabitur porta orci eget.   
+  </p>
+
+</article>
 </div><!--END OF CONTAINER DIV-->
 </body>
-
-<script>
-</script>
-
-<style>
-body {
-  background: #eee;
-}
-
-#container {
-  text-align: center;
-  height: 1060px;
-  display: grid;
-  grid-template-rows: 10% auto auto auto 5%;
-  grid-template-columns: auto 30% 30% auto;
-  grid-template-areas:
-  ". header header ."
-  ". a a ."
-  ". b c ."
-  ". d e ."
-  ". . . ."
-  ; 
-}
-
-#header {
-  grid-area: header;
-}
-
-#header h1 {
-  display: block;
-  font-size: 3em;
-}
-
-.button {
-  font-weight: 800;
-  font-size: 3rem;
-  margin: 5px;
-  padding: 10%;
-  border: solid 5px #333;
-  border-radius: 2rem;
-  cursor: pointer;
-}
-
-#covid {
-  grid-area: a;
-  background: rgba(251, 172, 172, 0.87);
-}
-
-#fire {
-  grid-area: b;
-  background: rgba(200, 50, 50, .87);
-}
-
-#power {
-  grid-area: c;
-  background: rgba(196, 216, 22, 0.87);
-}
-
-#weather {
-  grid-area: d;
-  background: rgba(50, 132, 200, 0.87);
-}
-
-#eq {
-  grid-area: e;
-  background: rgba(65, 51, 5, 0.87);
-}
-
-.button:hover {
-  color: #eee;
-}
-
-</style>
 </html>

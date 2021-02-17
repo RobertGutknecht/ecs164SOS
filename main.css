@@ -1,0 +1,108 @@
+body {
+  background: #ccc;
+}
+
+#container {
+  text-align: center;
+  height: 1060px;
+  display: grid;
+  grid-template-rows: 8% 5% 20% 60% auto;
+  grid-template-columns: auto 40% 20% auto;
+  grid-template-areas:
+  ". header header ."
+  ". nav nav ."
+  ". news news ."
+  ". map info ."
+  ". . . ."
+  ; 
+}
+
+.bordered {
+ border: solid 2px #333;
+ border-radius: 25px;
+}
+
+header {
+  grid-area: header;
+}
+
+header h1 {
+  display: block;
+  font-size: 3em;
+  margin: 15px;
+}
+
+nav {
+ grid-area: nav;
+ margin: 2px;
+ display: flex;
+ flex-direction: row;
+ justify-content: space-between;
+}
+
+nav a {
+ text-decoration: none;
+ color: inherit;
+ font-size: 1.5rem;
+ display: inline-block;
+ width: 150px;
+ padding: 10px;
+ border: solid 2px;
+ border-radius: 25px;
+}
+
+nav a:hover {
+  color: #eee;
+  text-shadow: 0 0 5px #c00;
+  border-color: #c00;
+  background: #444;
+}
+
+#mapParent {
+  grid-area: map;
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px;
+  justify-content: center;
+}
+
+.map {
+  display: inline-block;
+  width: 100%;
+  border-radius: 10%;
+}
+
+#info {
+  grid-area: info;
+  margin: 10px 0 0 15px;
+  background: rgba(0, 255, 149, 0.1);
+}
+
+#info p {
+  font-size: 1.5rem;
+}
+
+#news {
+  overflow-y: scroll;
+  grid-area: news;
+  margin: 10px;
+  background: rgba(0, 132, 255, 0.2);
+}
+
+#news p {
+  font-size: 1.2rem;
+}
+
+.button {
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 5px;
+  padding: 10%;
+  border: solid 5px #333;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #eee;
+}
