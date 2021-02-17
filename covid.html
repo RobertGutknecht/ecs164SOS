@@ -1,0 +1,94 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0">
+<title>COVID Info - SOS</title>
+</head>
+<body>
+<div id="container">
+<div id = "header">
+<h1>SOS - What is your emergency?</h1>
+</div>
+<span id = "covid" class = "button">COVID</span>
+<span id = "fire" class = "button">Fire</span>
+<span id = "power" class = "button">Power Outage</span>
+<span id = "weather" class = "button">Extreme Weather</span>
+<span id = "eq" class = "button">Earthquake</span>
+</div><!--END OF CONTAINER DIV-->
+</body>
+
+<script>
+</script>
+
+<style>
+body {
+  background: #eee;
+}
+
+#container {
+  text-align: center;
+  height: 1060px;
+  display: grid;
+  grid-template-rows: 10% auto auto auto 5%;
+  grid-template-columns: auto 30% 30% auto;
+  grid-template-areas:
+  ". header header ."
+  ". a a ."
+  ". b c ."
+  ". d e ."
+  ". . . ."
+  ; 
+}
+
+#header {
+  grid-area: header;
+}
+
+#header h1 {
+  display: block;
+  font-size: 3em;
+}
+
+.button {
+  font-weight: 800;
+  font-size: 3rem;
+  margin: 5px;
+  padding: 10%;
+  border: solid 5px #333;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+#covid {
+  grid-area: a;
+  background: rgba(251, 172, 172, 0.87);
+}
+
+#fire {
+  grid-area: b;
+  background: rgba(200, 50, 50, .87);
+}
+
+#power {
+  grid-area: c;
+  background: rgba(196, 216, 22, 0.87);
+}
+
+#weather {
+  grid-area: d;
+  background: rgba(50, 132, 200, 0.87);
+}
+
+#eq {
+  grid-area: e;
+  background: rgba(65, 51, 5, 0.87);
+}
+
+.button:hover {
+  color: #eee;
+}
+
+</style>
+</html>
